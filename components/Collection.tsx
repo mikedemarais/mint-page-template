@@ -216,11 +216,18 @@ export function Collection({
           <Paragraph className={wrapWords} mb="x2">
             <ReactMarkdown>
               {/* {JSON.parse(`"${metadata?.description || collection?.editionMetadata?.description}"`)} */}
-              {'A special edition Rainbow App Icon in celebration of Kabosu\'s 17th birthday.\n\nMake a swap for $DOG in Rainbow to get allowlisted and win a free pixel.\n\n '}
+              {'A special edition Rainbow app icon in celebration of Kabosu\'s 17th birthday.\n\nMake a swap for 16969 $DOG in Rainbow to get allow listed and win a free Pixel.\n\n '}
             </ReactMarkdown>
-            <a href="https://rnbwapp.com/campaign/doge?$web_only=true">
-              <Button  style={{  margin: 'auto',  width: '100%'}}>DO IT FOR THE DOGE</Button>
-            </a>
+            {/* <Flex justify="space-between" align="center">
+            <Button
+                as="a"
+                href={`https://rnbwapp.com/campaign/doge?$web_only=true}`}
+                target="_blank"
+                size="lg"
+                mt="x3">
+                  DO IT FOR THE DOGE
+            </Button>
+            </Flex> */}
           </Paragraph>
         </Stack>
         <Box>
@@ -228,7 +235,7 @@ export function Collection({
             <>
               {presaleExists ? (
                 <>
-                  {/* <Flex flexChildren gap="x3" mb="x4">
+                  <Flex flexChildren gap="x3" mb="x4">
                     <Button
                       pill
                       variant={showPresale ? 'primary' : 'ghost'}
@@ -245,7 +252,7 @@ export function Collection({
                     >
                       Public sale
                     </Button>
-                  </Flex> */}
+                  </Flex>
                   <Box style={{ display: showPresale ? 'block' : 'none' }}>
                     <PresaleComponent collection={collection} />
                   </Box>
@@ -284,5 +291,6 @@ export function Collection({
 
       </Box>
     </Flex>
+
   )
 }
