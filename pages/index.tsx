@@ -16,6 +16,7 @@ import { ipfsImage, shortenAddress } from '@lib/helpers'
 import { collectionAddresses } from '@lib/constants'
 import { useAccount, useEnsName } from 'wagmi'
 import { Collection } from '@components/Collection'
+import { Footer } from '@components/Footer'
 
 interface HomePageProps {
   collections: SubgraphERC721Drop[]
@@ -238,6 +239,7 @@ const HomePage: NextPage<HomePageProps> = ({ collections }) => {
           </ERC721DropContractProvider>
         ))}
       </Stack>
+      <Footer />
     </>
   )
 }
@@ -258,4 +260,5 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       collections: erc721Drops,
     },
   }
+
 }
